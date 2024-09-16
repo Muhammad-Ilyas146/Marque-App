@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Event</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Book an Event</h1>
+        </header>
+
+        <section id="booking-form">
+            <h2>Fill in the details to book an event</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="clientName">Client Name:</label>
+                    <input type="text" id="clientName" name="clientName" placeholder="Enter Client Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventType">Event Type:</label>
+                    <select id="eventType" name="eventType" required>
+                        <option value="">Select Event Type</option>
+                        <option value="Barat">Barat</option>
+                        <option value="Walima">Walima</option>
+                        <option value="Reception">Reception</option>
+                        <option value="Dinner">Dinner</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="totalInvoice">Total Invoice:</label>
+                    <input type="number" id="totalInvoice" name="totalInvoice" placeholder="Enter Total Invoice" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="advance">Advance Payment:</label>
+                    <input type="number" id="advance" name="advance" placeholder="Enter Advance Payment" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstInstallment">First Installment:</label>
+                    <input type="number" id="firstInstallment" name="firstInstallment" placeholder="Enter First Installment" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="secondInstallment">Second Installment:</label>
+                    <input type="number" id="secondInstallment" name="secondInstallment" placeholder="Enter Second Installment" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="thirdInstallment">Third Installment:</label>
+                    <input type="number" id="thirdInstallment" name="thirdInstallment" placeholder="Enter Third Installment" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="remainingBalance">Remaining Balance:</label>
+                    <input type="number" id="remainingBalance" name="remainingBalance" placeholder="Calculated Remaining Balance" readonly>
+                </div>
+
+                <button type="submit">Book Event</button>
+            </form>
+        </section>
+
+        <button onclick="window.location.href='index.html'">Return to Home</button>
+
+        <footer>
+            <p>&copy; 2024 Event Booking App. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
